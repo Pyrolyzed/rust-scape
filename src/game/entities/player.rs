@@ -1,5 +1,5 @@
 
-use crate::interfaces::killable::Killable;
+use crate::game::interfaces::killable::Killable;
 
 pub struct Player {
     name: String,
@@ -25,6 +25,11 @@ impl Player {
         self.health -= health;
     }
 
+    pub fn damage_stamina(&mut self, health: u32) {
+
+    }
+
+    
     pub fn print_stats(&self) {
         println!("{}'s stats:", self.name);
         println!("Health: {}", self.health);

@@ -1,10 +1,8 @@
 
-mod player;
-mod input;
-mod interfaces;
+mod game;
 
-use player::Player;
-use input::read_line;
+use game::entities::player::Player;
+use game::lib::input::read_line;
 
 const WELCOME_MSG: &str = "Welcome to RustScape!";
 
