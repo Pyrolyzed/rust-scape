@@ -18,10 +18,6 @@ fn main() {
     let player: Player = load_game().unwrap();
 
     player.print_stats();
-
-
-    
-    // player.print_stats();
 }
 
 fn load_game() -> Result<Player, io::Error> {
@@ -43,7 +39,7 @@ fn load_game() -> Result<Player, io::Error> {
 
 fn welcome() {
     // Clears screen (since it's not obvious, I mean, what is this?)
-    print!("\x1B[2J\x1B[1;1H");
+    print!("{esc}c", esc = 27 as char);
 
     println!("{}", WELCOME_MSG);
 }
